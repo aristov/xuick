@@ -1,0 +1,25 @@
+.Example
+{
+  padding: 24px var(--gap);
+}
+.Example:not(:first-child)
+{
+  border-top: 5px solid #eee;
+}
+.Example.flex
+{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+.Example.grid
+{
+  display: grid;
+  gap: var(--gap);
+}
+.Example.wide
+{
+  padding-left: 0;
+  padding-right: 0;
+}

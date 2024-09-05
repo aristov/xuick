@@ -1,0 +1,16 @@
+@import 'Widget.css';
+@import 'Button.css';
+
+.NativeButton
+{
+  border: none;
+  padding: 0;
+  line-height: inherit;
+  background-color: transparent;
+}
+.NativeButton[disabled] > .Control
+{
+  cursor: var(--disabled-cursor);
+  border-color: var(--disabled-border-color);
+  background-color: var(--disabled-bg-color);
+}

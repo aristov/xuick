@@ -1,0 +1,40 @@
+.ListBox
+{
+  display: inline-block;
+  white-space: nowrap;
+  user-select: none;
+  outline: none;
+  margin: var(--widget-margin);
+  vertical-align: top;
+}
+.ListBox > .Control
+{
+  display: block;
+  overflow-y: auto;
+  padding: 5px 0;
+  height: 100%;
+  max-height: 400px;
+  min-width: calc(var(--textbox-width) / 2);
+}
+.ListBox:focus-within.keyboard > .Control
+{
+  border-color: var(--focus-border-color);
+  box-shadow: var(--focus-box-shadow);
+}
+.ListBox.active .Option[aria-selected=true],
+.ListBox .Option[aria-selected=true]:active
+{
+  background-color: var(--action-active-bg-color);
+}
+.ListBox[aria-readonly=true] .Option
+{
+  cursor: default;
+}
+.ListBox[aria-disabled=true] .Option[aria-selected=true]:not([aria-checked])
+{
+  background-color: var(--checked-disabled-bg-color);
+}
+.ListBox[aria-disabled=true] .Option[aria-checked=true]::before
+{
+  opacity: .4;
+}

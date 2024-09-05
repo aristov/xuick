@@ -1,0 +1,23 @@
+@import 'icons/css/fontawesome-fonts.css';
+
+.PrevButton
+{
+  padding: 5px 10px;
+  color: var(--dim-color);
+}
+.PrevButton::before
+{
+  font-family: 'fontawesome';
+  content: '\e80b';
+}
+.PrevButton:focus-visible
+{
+  color: inherit;
+}
+@media (hover: hover) and (pointer: fine)
+{
+  .PrevButton:hover
+  {
+    color: inherit;
+  }
+}

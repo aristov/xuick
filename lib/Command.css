@@ -1,0 +1,5 @@
+.Command.active > .Control,
+.Command > .Control:active
+{
+  background-color: var(--active-bg-color);
+}

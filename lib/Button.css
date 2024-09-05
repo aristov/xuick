@@ -1,0 +1,155 @@
+.Button
+{
+  white-space: nowrap;
+}
+.ButtonControl
+{
+  min-width: calc(var(--textbox-width) / 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 5px;
+}
+.ButtonControl > .Label
+{
+  font-size: inherit;
+  margin: 0;
+}
+.Button.icon > .ButtonControl
+{
+  min-width: auto;
+}
+/* action */
+.Button.action > .ButtonControl
+{
+  background-color: var(--action-bg-color);
+  border-color: var(--accent-border-color);
+}
+.Button.action.active > .ButtonControl,
+.Button.action > .ButtonControl:active
+{
+  background-color: var(--action-active-bg-color);
+}
+.Button.action:focus-visible > .ButtonControl
+{
+  color: var(--accent-color);
+}
+/* accent */
+.Button.accent > .ButtonControl
+{
+  color: var(--accent-text-color);
+  border-color: var(--accent-border-color);
+  background-color: var(--accent-bg-color);
+}
+.Button.accent.active > .ButtonControl,
+.Button.accent > .ButtonControl:active
+{
+  background-color: var(--accent-active-bg-color);
+}
+.Button.accent:focus-visible > .ButtonControl
+{
+  color: var(--action-color);
+}
+/* attention */
+.Button.attention > .ButtonControl
+{
+  color: var(--attention-text-color);
+  border-color: var(--attention-border-color);
+  background-color: var(--attention-bg-color);
+}
+.Button.attention.active > .ButtonControl,
+.Button.attention > .ButtonControl:active
+{
+  background-color: var(--attention-active-bg-color);
+}
+.Button.attention:focus-visible > .ButtonControl
+{
+  border-color: var(--focus-border-color);
+}
+/* dim */
+.Button.dim > .ButtonControl
+{
+  color: var(--dim-text-color);
+  border-color: var(--dim-border-color);
+  background-color: var(--dim-bg-color);
+}
+.Button.dim.active > .ButtonControl,
+.Button.dim > .ButtonControl:active
+{
+  background-color: var(--dim-active-bg-color);
+}
+.Button.dim:focus-visible > .ButtonControl
+{
+  border-color: var(--focus-border-color);
+}
+/* flying */
+.Button.flying > .ButtonControl
+{
+  border-color: transparent;
+  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.15);
+}
+/* round */
+.Button.round > .ButtonControl
+{
+  border-radius: 50%;
+  padding: 4px;
+}
+/* transparent */
+.Button.transparent > .ButtonControl
+{
+  color: #fff;
+  border-color: transparent;
+  background-color: transparent;
+}
+.Button.transparent.active > .ButtonControl,
+.Button.transparent > .ButtonControl:active
+{
+  background-color: transparent;
+}
+.Button.transparent:focus-visible > .ButtonControl
+{
+  border-color: var(--focus-border-color);
+}
+/* active */
+.Button.active > .ButtonControl,
+.Button > .ButtonControl:active
+{
+  background: var(--active-bg-color);
+}
+/* aria-pressed */
+.Button[aria-pressed=true] > .ButtonControl
+{
+  color: var(--checked-text-color);
+  background-color: var(--checked-bg-color);
+}
+.Button[aria-pressed=true].active > .ButtonControl,
+.Button[aria-pressed=true] > .ButtonControl:active
+{
+  background-color: var(--checked-active-bg-color);
+}
+.Button[aria-pressed=true][aria-disabled=true] > .ButtonControl
+{
+  background-color: var(--checked-disabled-bg-color);
+}
+/* aria-disabled */
+.Button[aria-disabled=true] > .ButtonControl,
+.Button[aria-disabled=true] > .ButtonControl:active
+{
+  background-color: var(--disabled-bg-color);
+  border-color: var(--disabled-border-color);
+  color: var(--disabled-color);
+}
+
+@media (pointer: fine)
+{
+  .Button,
+  .Button .ButtonLabel
+  {
+    cursor: pointer;
+  }
+  .Button[aria-disabled=true],
+  .Button[aria-disabled=true] .ButtonLabel
+  {
+    cursor: default;
+  }
+}

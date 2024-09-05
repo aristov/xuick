@@ -1,0 +1,39 @@
+.AlertDialog .DialogContent
+{
+  display: block;
+  padding: 4px 16px;
+  min-width: 160px;
+  max-width: 320px;
+}
+.AlertDialog .Heading
+{
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin: 12px 0;
+}
+.AlertDialog .DialogMessage
+{
+  font-size: 12px;
+  margin: 12px 0;
+  word-break: break-word;
+}
+.AlertDialog .Heading::first-letter,
+.AlertDialog .DialogMessage::first-letter
+{
+  text-transform: uppercase;
+}
+.AlertDialog .FootBlock
+{
+  display: grid;
+}
+.AlertDialog .Button
+{
+  font-size: 14px;
+  font-weight: 500;
+  margin: 12px 0;
+}
+.AlertDialog .ButtonControl
+{
+  padding: 8px;
+}

@@ -1,0 +1,11 @@
+.PopupContent
+{
+  position: relative;
+  display: flex;
+  background-color: var(--popup-bg-color);
+  box-shadow: var(--popup-box-shadow);
+  border-radius: var(--control-border-radius);
+  max-height: 100%;
+  max-width: var(--max-width);
+  box-sizing: border-box;
+}

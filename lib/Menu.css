@@ -1,0 +1,16 @@
+.Menu[aria-orientation=vertical] .MenuItem
+{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  grid-gap: 8px;
+}
+.Menu[aria-orientation=vertical] .MenuItem .Icon
+{
+  font-size: 11px;
+}
+.Menu[aria-orientation=vertical] .MenuItem .Label
+{
+  font-size: 14px;
+  margin-bottom: 0;
+}

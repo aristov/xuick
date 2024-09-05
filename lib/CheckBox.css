@@ -1,0 +1,104 @@
+@import 'icons/css/fontawesome-fonts.css';
+
+.CheckBox
+{
+  white-space: nowrap;
+  padding: var(--control-padding);
+  padding-left: 0;
+  font-size: inherit;
+}
+.CheckBoxControl
+{
+  color: #fff;
+  width: auto;
+  font-size: 1.14em;
+  padding: .5em;
+  margin: .0625em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.CheckBoxControl::before
+{
+  font-family: 'fontawesome';
+  font-size: .625em;
+  position: absolute;
+}
+.CheckBox > .CheckBoxLabel
+{
+  display: inline-block;
+  vertical-align: middle;
+  margin: var(--checkbox-label-margin);
+  color: inherit;
+  font-size: inherit;
+}
+.CheckBox.active > .CheckBoxControl,
+.CheckBox:active > .CheckBoxControl
+{
+  background: var(--active-bg-color);
+}
+.CheckBox:focus-visible > .CheckBoxControl
+{
+  border-color: var(--focus-border-color);
+}
+.CheckBox[aria-checked=true] > .CheckBoxControl,
+.CheckBox[aria-checked=mixed] > .CheckBoxControl
+{
+  border-color: transparent;
+}
+.CheckBox[aria-checked=true] > .CheckBoxControl::before
+{
+  content: '\e801';
+}
+.CheckBox[aria-checked=mixed] > .CheckBoxControl::before
+{
+  content: '\e803';
+  font-size: .75em;
+  line-height: 0;
+  margin-top: .0625em;
+}
+.CheckBox[aria-checked=true] > .CheckBoxControl,
+.CheckBox[aria-checked=mixed] > .CheckBoxControl
+{
+  background-color: var(--checked-bg-color);
+}
+.CheckBox[aria-checked=true]:focus-visible > .CheckBoxControl,
+.CheckBox[aria-checked=mixed]:focus-visible > .CheckBoxControl
+{
+  background-color: var(--checked-active-bg-color);
+}
+.CheckBox[aria-checked=true].active > .CheckBoxControl,
+.CheckBox[aria-checked=true]:active > .CheckBoxControl,
+.CheckBox[aria-checked=mixed].active > .CheckBoxControl,
+.CheckBox[aria-checked=mixed]:active > .CheckBoxControl
+{
+  background-color: var(--checked-active-bg-color);
+}
+.CheckBox[aria-readonly=true]
+{
+  opacity: var(--readonly-opacity);
+}
+.CheckBox[aria-disabled=true]
+{
+  cursor: var(--disabled-cursor);
+}
+.CheckBox[aria-disabled=true] > .CheckBoxLabel
+{
+  cursor: var(--disabled-cursor);
+}
+.CheckBox[aria-checked=true][aria-disabled=true] > .CheckBoxControl
+{
+  background-color: var(--checked-disabled-bg-color);
+}
+@media (hover: hover) and (pointer: fine)
+{
+  .CheckBox,
+  .CheckBoxLabel
+  {
+    cursor: pointer;
+  }
+  .CheckBox:hover > .CheckBoxControl
+  {
+    border-color: var(--accent-color);
+  }
+}

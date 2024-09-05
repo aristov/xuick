@@ -1,0 +1,26 @@
+.DialogHead
+{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-column-gap: var(--gap);
+  box-sizing: border-box;
+  position: relative;
+  padding: var(--block-padding);
+}
+.DialogHead .Heading
+{
+  align-self: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+.DialogHead .DialogCancelButton
+{
+  align-self: center;
+  position: relative;
+}
+.DialogHead + .DialogBody
+{
+  padding-top: 0;
+}

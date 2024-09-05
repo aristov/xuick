@@ -1,0 +1,94 @@
+.DatePickerGrid
+{
+  font-size: 12px;
+  line-height: 1.3;
+  width: 100%;
+  box-sizing: border-box;
+}
+.DatePickerGrid .ColumnHeader,
+.DatePickerGrid .GridCell
+{
+  text-align: center;
+  padding: var(--gap);
+  border: 1px solid transparent;
+  min-width: 15px;
+  position: relative;
+}
+.DatePickerGrid .ColumnHeader
+{
+  color: var(--dim-color);
+}
+.DatePickerGrid .ColumnHeader::first-letter
+{
+  text-transform: uppercase;
+}
+.DatePickerGrid .GridCell.dim
+{
+  color: var(--dim-color);
+}
+.DatePickerGrid .GridCell[aria-current=date]::before
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: var(--control-border);
+  border-radius: var(--border-radius);
+}
+.DatePickerGrid .GridCell[aria-selected=true]
+{
+  color: inherit;
+  background-color: #e7e7e7;
+}
+.DatePickerGrid .GridCell[aria-selected=true]::before
+{
+  border-color: #fff;
+}
+.DatePickerGrid .GridCell[aria-selected=true].start,
+.DatePickerGrid .GridCell[aria-selected=true].end
+{
+  background-color: var(--accent-color);
+  color: var(--accent-text-color);
+  font-weight: 500;
+}
+.DatePickerGrid .GridCell[aria-selected=true].end,
+.DatePickerGrid .GridCell[aria-selected=true]:last-child
+{
+  border-top-right-radius: var(--control-border-radius);
+  border-bottom-right-radius: var(--control-border-radius);
+}
+.DatePickerGrid .GridCell[aria-selected=true].start,
+.DatePickerGrid .GridCell[aria-selected=true]:first-child
+{
+  border-top-left-radius: var(--control-border-radius);
+  border-bottom-left-radius: var(--control-border-radius);
+}
+.DatePickerGrid[aria-multiselectable=true] .GridCell[aria-selected=true].end:not(.start)::before
+{
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.DatePickerGrid[aria-multiselectable=true] .GridCell[aria-selected=true].start:not(.end)::before
+{
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.DatePickerGrid[aria-disabled=true] .ColumnHeader,
+.DatePickerGrid[aria-disabled=true] .GridCell
+{
+  color: var(--disabled-text-color);
+}
+.DatePickerGrid[aria-disabled=true] .GridCell[aria-selected=true]
+{
+  background-color: rgb(0 0 0 / .05);
+  border-color: var(--disabled-border-color);
+}
+@media (pointer: fine)
+{
+  .DatePickerGrid .GridCell
+  {
+    cursor: pointer;
+  }
+}

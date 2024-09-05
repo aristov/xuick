@@ -1,0 +1,14 @@
+.MenuItem
+{
+  font-size: inherit;
+  display: block;
+}
+.MenuItem[href]
+{
+  color: inherit;
+  cursor: default;
+}
+.MenuItem[aria-disabled=true] .Icon
+{
+  opacity: .5;
+}

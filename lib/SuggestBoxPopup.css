@@ -1,0 +1,43 @@
+.SuggestBoxPopup
+{
+  padding: 1px 0;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 100%;
+  min-width: var(--textbox-width);
+}
+.SuggestBoxPopup[data-direction^=bottom]
+{
+  padding-bottom: var(--gap);
+}
+.SuggestBoxPopup[data-direction^=top]
+{
+  padding-top: var(--gap);
+}
+.SuggestBoxPopup .PopupContent
+{
+  overflow: hidden;
+}
+.SuggestBoxPopup .ListBox
+{
+  margin: 0;
+  width: 100%;
+}
+.SuggestBoxPopup .ListBox[aria-hidden=true]
+{
+  display: none;
+}
+.SuggestBoxPopup .ListBoxControl
+{
+  align-self: flex-start;
+  border: none;
+}
+.SuggestBoxPopup .Option[aria-disabled=true]
+{
+  display: none;
+}
+.SuggestBoxPopup .Status
+{
+  padding: 10px var(--control-padding-h);
+  color: var(--dim-color);
+}

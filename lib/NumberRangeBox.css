@@ -1,0 +1,31 @@
+.NumberRangeBox .NativeInputBox
+{
+  width: auto;
+}
+.NumberRangeBox .NativeInput
+{
+  width: 50px;
+  text-align: center;
+}
+.NumberRangeBox > .Control > .Span
+{
+  opacity: var(--icon-opacity);
+}
+.NumberRangeBox .Button > .Control
+{
+  min-width: auto;
+}
+.NumberRangeBox .Button > .Control::before
+{
+  font-family: 'fontawesome';
+  line-height: 0;
+  content: '\e810';
+  opacity: var(--icon-opacity);
+}
+@media (hover: hover) and (pointer: fine)
+{
+  .NumberRangeBox .Button:hover > .Control::before
+  {
+    opacity: var(--icon-hover-opacity);
+  }
+}

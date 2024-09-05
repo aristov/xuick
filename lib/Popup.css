@@ -1,0 +1,64 @@
+.Popup
+{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--gap);
+  max-width: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
+  transition: opacity .2s, transform .2s, top .2s, left .2s;
+  z-index: var(--popup-z-index);
+}
+.Popup[aria-modal=true]
+{
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: var(--popup-modal-z-index);
+}
+.Popup[aria-modal=true]::before
+{
+  content: '';
+  position: fixed;
+  top: -100%;
+  right: -100%;
+  bottom: -100%;
+  left: -100%;
+  background-color: rgba(0, 0, 0, .5);
+}
+.Popup[aria-hidden=false]
+{
+  opacity: 0;
+  transform: translateY(1em);
+}
+.Popup[aria-hidden=true]
+{
+  opacity: 0;
+}
+.Popup[data-direction=none]
+{
+  position: absolute;
+}
+.Popup[aria-hidden][data-direction=left]
+{
+  transform: translateX(-100%);
+}
+.Popup[aria-hidden][data-direction=right]
+{
+  transform: translateX(100%);
+}
+.Popup[aria-hidden][data-direction=top]
+{
+  transform: translateY(-100%);
+}
+.Popup[aria-hidden][data-direction=bottom]
+{
+  transform: translateY(100%);
+}
+html:has(.Popup[aria-modal=true])
+{
+  overflow: hidden;
+}

@@ -1,0 +1,23 @@
+@import 'icons/css/fontawesome-fonts.css';
+
+.NextButton
+{
+  padding: 5px 10px;
+  color: var(--dim-color);
+}
+.NextButton::before
+{
+  font-family: 'fontawesome';
+  content: '\e80c';
+}
+.NextButton:focus-visible
+{
+  color: inherit;
+}
+@media (hover: hover) and (pointer: fine)
+{
+  .NextButton:hover
+  {
+    color: inherit;
+  }
+}

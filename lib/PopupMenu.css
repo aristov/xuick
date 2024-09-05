@@ -1,0 +1,27 @@
+.PopupMenu
+{
+  padding: 12px var(--gap);
+  width: 100%;
+}
+.PopupMenu > .Label
+{
+  font-size: inherit;
+  font-weight: 500;
+  padding: 0 4px;
+  margin: 12px 0;
+}
+.PopupMenu .MenuItems
+{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  font-size: 14px;
+  line-height: 1.4;
+  border-radius: var(--border-radius);
+  max-width: 300px;
+}
+.PopupMenu .MenuItem
+{
+  padding: var(--gap) 4px;
+  white-space: nowrap;
+}

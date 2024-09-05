@@ -1,0 +1,6 @@
+.Placeholder
+{
+  position: absolute;
+  color: var(--dim-color);
+  display: none;
+}

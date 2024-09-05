@@ -1,0 +1,57 @@
+@import 'icons/css/fontawesome-fonts.css';
+
+.TimeBox .TextBox
+{
+  min-width: calc(var(--textbox-width) / 2);
+  width: auto;
+}
+.TimeBox .TextBox > .Control
+{
+  display: flex;
+  justify-content: space-between;
+}
+.TimeBox .TextBox > .Control::after
+{
+  font-family: 'fontawesome';
+  content: '\e81c';
+  line-height: 0;
+  align-self: center;
+  color: var(--icon-color);
+  opacity: var(--icon-opacity);
+}
+.TimeBox .TextBoxInput,
+.TimeBox .TextBoxPlaceholder
+{
+  min-width: 30px;
+  text-align: center;
+}
+.TimeBox .Popup
+{
+  padding: 2px 0;
+}
+.TimeBox .ListBox
+{
+  margin: 0;
+  width: 100%;
+}
+.TimeBox .ListBox > .Control
+{
+  border: none;
+  min-width: calc(var(--textbox-width) / 2);
+}
+.TimeBox:active .TextBox > .Control
+{
+  border-color: var(--focus-border-color);
+  box-shadow: var(--focus-box-shadow);
+}
+.TimeBox:focus-visible .TextBox > .Control::after
+{
+  opacity: .7;
+}
+@media (hover: hover) and (pointer: fine)
+{
+  .TimeBox:hover .TextBox > .Control::after
+  {
+    opacity: .7;
+  }
+}

@@ -1,0 +1,39 @@
+@import 'Widget.css';
+
+.RadioGroup
+{
+  display: inline-block;
+  margin: var(--widget-margin);
+  outline: none;
+  font-size: inherit;
+}
+.RadioGroup[aria-disabled=true],
+.RadioGroup[aria-disabled=true] .Radio
+{
+  cursor: var(--disabled-cursor);
+  color: var(--disabled-text-color);
+}
+.RadioGroup[aria-disabled=true] .Radio::before
+{
+  background: var(--disabled-bg-color);
+  border-color: var(--disabled-border-color);
+}
+.RadioGroup[aria-disabled=true] .Radio[aria-checked=true]::before
+{
+  background: var(--checked-disabled-bg-color);
+}
+.RadioGroup:focus-visible .Radio.focus > .Control
+{
+  border-color: var(--focus-border-color);
+  box-shadow: var(--focus-box-shadow);
+}
+.RadioGroup.active .Radio.focus > .Control,
+.RadioGroup .Radio:active > .Control
+{
+  background-color: var(--active-bg-color);
+}
+.RadioGroup.active .Radio[aria-checked=true] > .Control,
+.RadioGroup .Radio[aria-checked=true]:active > .Control
+{
+  background-color: var(--checked-active-bg-color);
+}

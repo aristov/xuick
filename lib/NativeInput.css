@@ -1,0 +1,19 @@
+.NativeInput
+{
+  font: inherit;
+  color: var(--text-color);
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  appearance: none;
+  box-sizing: border-box;
+}
+.NativeInput::placeholder
+{
+  color: var(--dim-color);
+}
+.NativeInput::-webkit-search-cancel-button
+{
+  display: none;
+}

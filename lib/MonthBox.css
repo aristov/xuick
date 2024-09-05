@@ -1,0 +1,5 @@
+.MonthBox > .Control > .Inner::first-letter,
+.MonthBox .Option::first-letter
+{
+  text-transform: uppercase;
+}

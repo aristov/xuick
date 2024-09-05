@@ -1,0 +1,76 @@
+@import 'icons/css/fontawesome-fonts.css';
+
+.DateBox
+{
+  position: relative;
+  display: inline-block;
+  min-width: calc(var(--textbox-width) / 2);
+  max-width: var(--textbox-width);
+}
+.DateBox > .Control
+{
+  white-space: nowrap;
+  padding-right: calc(1em + var(--control-padding-h) * 2);
+}
+.DateBox > .Control > .Inner
+{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  align-self: center;
+}
+.DateBox > .Control > .Inner::first-letter
+{
+  text-transform: uppercase;
+}
+.DateBox > .Control::after
+{
+  font: 80% 'fontawesome';
+  content: '\e818';
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: calc(1em + var(--control-padding-h) * 2);
+  color: var(--dim-color);
+  opacity: var(--icon-opacity);
+  padding: var(--control-padding);
+  box-sizing: border-box;
+}
+.DateBox.active > .Control,
+.DateBox > .Control:active
+{
+  background-color: var(--active-bg-color);
+}
+.DateBox:focus-visible > .Control::after
+{
+  opacity: .7;
+}
+.DateBox[aria-disabled=true] > .Control::after
+{
+  opacity: .1;
+}
+.DateBox.blank > .Control
+{
+  color: var(--dim-color);
+}
+.DateBoxPopup
+{
+  padding: 2px 0;
+}
+.DateBoxPopup .DatePicker
+{
+  margin: 0;
+}
+.DateBoxPopup .DatePicker > .Control
+{
+  border: none;
+}
+@media (hover: hover) and (pointer: fine)
+{
+  .DateBox:hover > .Control::after
+  {
+    opacity: .7;
+  }
+}

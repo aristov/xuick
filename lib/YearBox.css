@@ -1,0 +1,16 @@
+.YearBox.blank > .Control
+{
+  color: var(--dim-color);
+}
+.YearBox .ListBoxControl
+{
+  max-height: 200px;
+}
+.YearBoxPopup
+{
+  padding: 1px 0;
+}
+.YearBoxPopup .YearPickerControl
+{
+  border: none;
+}

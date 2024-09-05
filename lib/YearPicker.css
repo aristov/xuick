@@ -1,0 +1,19 @@
+.YearPicker .Grid
+{
+  text-align: center;
+}
+.YearPicker .GridCell
+{
+  padding: var(--gap) 4px;
+  min-width: 4ch;
+  border: 1px solid transparent;
+}
+.YearPicker .GridCell[aria-selected=true]
+{
+  color: var(--accent-text-color);
+  background-color: var(--accent-color);
+}
+.YearPicker .GridCell[aria-current=date]
+{
+  border-color: var(--action-color);
+}

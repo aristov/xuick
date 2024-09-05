@@ -1,0 +1,9 @@
+.ComboBox
+{
+  min-width: var(--button-width);
+}
+.ComboBox > .Control:active,
+.ComboBox.active > .Control
+{
+  background-color: var(--active-bg-color);
+}

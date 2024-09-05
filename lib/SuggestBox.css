@@ -1,0 +1,51 @@
+.SuggestBox
+{
+  position: relative;
+  display: inline-block;
+  width: var(--textbox-width);
+}
+.SuggestBoxControl
+{
+  border: none;
+  padding: 0;
+}
+.SuggestBox .TextBox
+{
+  width: 100%;
+  font-size: inherit;
+}
+.SuggestBox .TextBoxControl
+{
+  padding-right: 26px;
+}
+.SuggestBox:active .TextBoxControl
+{
+  border-color: var(--focus-border-color);
+  box-shadow: var(--focus-box-shadow);
+}
+.SuggestBox:not(.blank).active .TextBoxControl,
+.SuggestBox:not(.blank) .TextBoxControl:active
+{
+  background-color: var(--active-bg-color);
+}
+.SuggestBox:not(.blank) .TextBoxInput
+{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  user-select: none;
+}
+.SuggestBox .ClearButton
+{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: calc(1em + var(--control-padding-h) * 2);
+}
+@media (pointer: fine)
+{
+  .SuggestBox:not(.blank) .TextBoxControl
+  {
+    cursor: pointer;
+  }
+}

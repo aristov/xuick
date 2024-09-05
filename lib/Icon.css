@@ -1,0 +1,23 @@
+@import 'icons/css/fontawesome-fonts.css';
+@import 'icons/css/fontawesome-codes.css';
+
+.Icon
+{
+  display: inline-block;
+  line-height: 1;
+}
+.Icon::before
+{
+  font-family: 'fontawesome';
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+  display: inline-block;
+  text-decoration: inherit;
+  margin: 0 .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

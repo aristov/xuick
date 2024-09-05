@@ -1,0 +1,83 @@
+@import 'Widget.css';
+
+.TextBox
+{
+  width: var(--textbox-width);
+}
+.TextBox > .Control
+{
+  width: 100%;
+  cursor: text;
+  overflow: hidden;
+}
+.TextBox .TextBoxInput
+{
+  overflow: hidden;
+  white-space: nowrap;
+  outline: none;
+  min-height: 1em;
+  user-select: auto;
+}
+.TextBox .TextBoxPlaceholder
+{
+  white-space: nowrap;
+}
+.TextBox .ClearButton
+{
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  width: 27px;
+}
+.TextBox[aria-multiline] .TextBoxInput
+{
+  max-height: none;
+  white-space: normal;
+  word-break: break-word;
+}
+.TextBox[aria-multiline] .TextBoxPlaceholder
+{
+  white-space: normal;
+}
+.TextBox.blank .TextBoxInput::before
+{
+  content: '\00A0';
+}
+.TextBox.blank .TextBoxPlaceholder
+{
+  display: inline-block;
+}
+.TextBox.blank .ClearButton
+{
+  display: none;
+}
+.TextBox:focus-within > .Control
+{
+  border-color: var(--focus-border-color);
+  box-shadow: var(--focus-box-shadow);
+}
+.TextBox[aria-disabled=true] .ClearButton
+{
+  cursor: default;
+  opacity: .2;
+}
+.TextBox[aria-disabled=true] .TextBoxPlaceholder
+{
+  color: var(--disabled-text-color);
+  opacity: .5;
+}
+.TextBox[aria-readonly=true] > .Control
+{
+  opacity: var(--readonly-opacity);
+  cursor: default;
+  padding-right: var(--control-padding-h);
+}
+.TextBox[aria-readonly=true] .ClearButton
+{
+  display: none;
+}
+.TextBox[aria-invalid=true] > .Control
+{
+  border-color: var(--attention-color);
+}

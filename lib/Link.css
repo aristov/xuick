@@ -1,0 +1,15 @@
+.Link
+{
+  display: inline;
+  font-size: inherit;
+  line-height: inherit;
+  user-select: auto;
+  margin: 0;
+}
+@media (pointer: coarse)
+{
+  .Link
+  {
+    cursor: default;
+  }
+}

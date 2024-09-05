@@ -1,0 +1,24 @@
+.Control
+{
+  position: relative;
+  box-sizing: border-box;
+  color: var(--text-color);
+  background-color: var(--control-bg-color);
+  width: 100%;
+  padding: var(--control-padding);
+  display: inline-block;
+  border-radius: var(--control-border-radius);
+  border: var(--control-border);
+  vertical-align: middle;
+}
+@media (hover: hover) and (pointer: fine)
+{
+  .Control
+  {
+    cursor: pointer;
+  }
+  .Control:hover
+  {
+    border-color: var(--accent-color);
+  }
+}

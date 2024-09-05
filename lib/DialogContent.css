@@ -1,0 +1,10 @@
+.DialogContent
+{
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  position: relative;
+  max-height: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+  outline: none;
+}

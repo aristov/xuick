@@ -1,0 +1,22 @@
+.ToolTip
+{
+  font-size: 10px;
+  line-height: 1.4;
+  padding: 0;
+  white-space: nowrap;
+}
+.ToolTip > .PopupContent
+{
+  margin-top: -5px;
+  padding: 4px 6px 2px;
+  border: var(--control-border);
+  box-shadow: none;
+}
+.ToolTip[data-direction=bottom-center-right] > .PopupContent
+{
+  border-top-left-radius: 0;
+}
+.ToolTip[data-direction=bottom-center-left] > .PopupContent
+{
+  border-top-right-radius: 0;
+}

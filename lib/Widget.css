@@ -1,0 +1,49 @@
+.Widget
+{
+  font-size: var(--widget-font-size);
+  line-height: 1.3;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  margin: var(--widget-margin);
+  outline: none;
+  user-select: none;
+}
+.Widget > .Label
+{
+  font-size: 10px;
+  margin: 0 0 4px 0;
+}
+.Widget:focus-visible > .Control
+{
+  border-color: var(--focus-border-color);
+  box-shadow: var(--focus-box-shadow);
+}
+.Widget[aria-disabled=true]
+{
+  color: var(--disabled-text-color);
+}
+.Widget[aria-disabled=true] > .Label
+{
+  color: var(--disabled-text-color);
+}
+.Widget[aria-disabled=true] > .Control
+/*, .Widget[aria-disabled=true]:hover > .Control*/
+{
+  cursor: var(--disabled-cursor);
+  color: var(--disabled-text-color);
+  background-color: var(--disabled-bg-color);
+  border-color: var(--disabled-border-color);
+}
+.Widget[aria-invalid=true]
+{
+  color: var(--attention-color);
+}
+.Widget[aria-invalid=true] > .Control
+{
+  border-color: var(--attention-color);
+}
+.Widget[aria-hidden=true]
+{
+  display: none;
+}

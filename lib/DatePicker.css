@@ -1,0 +1,45 @@
+.DatePicker .DatePickerHead
+{
+  padding: 4px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.DatePicker .Button[type=today]
+{
+  padding: 5px 10px;
+  color: var(--dim-color);
+}
+.DatePicker .Button[type=today]:focus
+{
+  color: inherit;
+}
+.DatePicker .Button[type=today][aria-disabled=true]
+{
+  opacity: .5;
+}
+.DatePicker .Button[type=today]::before
+{
+  font-family: 'fontawesome';
+  content: '\f274';
+}
+.DatePicker .MonthYearBox
+{
+  font-size: inherit;
+}
+.DatePicker .MonthYearBoxControl
+{
+  border: none;
+}
+.DatePicker .SelectBoxControl,
+.DatePicker .YearBoxControl
+{
+  font-weight: 500;
+}
+@media (hover: hover) and (pointer: fine)
+{
+  .DatePicker .Button[type=today]:hover
+  {
+    color: inherit;
+  }
+}

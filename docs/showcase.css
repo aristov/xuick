@@ -1,0 +1,12 @@
+@import '../lib/root.css';
+
+html
+{
+  font: 300 14px/1.4 'Arial', sans-serif;
+}
+body
+{
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  margin: 0 auto;
+}

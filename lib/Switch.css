@@ -1,0 +1,86 @@
+.Switch
+{
+  white-space: nowrap;
+  padding: var(--control-padding);
+  padding-left: 0;
+  font-size: inherit;
+}
+.SwitchControl
+{
+  width: auto;
+  padding: 4px 15px;
+  margin: 1px 6px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.SwitchControl::before
+{
+  content: '';
+  padding: 9px;
+  border-radius: 50%;
+  border: var(--control-border);
+  position: absolute;
+  left: -6px;
+  background-color: var(--bg-color);
+  transition: left .2s, background-color .2s;
+}
+.Switch > .SwitchLabel
+{
+  display: inline-block;
+  vertical-align: middle;
+  margin: var(--checkbox-label-margin);
+  color: inherit;
+  font-size: inherit;
+}
+.Switch.active > .SwitchControl,
+.Switch:active > .SwitchControl
+{
+  background: var(--active-bg-color);
+}
+.Switch:focus-visible > .SwitchControl,
+.Switch:focus-visible > .SwitchControl::before
+{
+  border-color: var(--focus-border-color);
+  box-shadow: var(--focus-box-shadow);
+}
+.Switch[aria-checked=true] > .SwitchControl::before
+{
+  content: '';
+  left: 16px;
+  background-color: var(--checked-bg-color);
+  border-color: transparent;
+}
+.Switch[aria-readonly=true]
+{
+  opacity: var(--readonly-opacity);
+}
+.Switch[aria-disabled=true] > .SwitchControl::before
+{
+  background-color: var(--disabled-bg-color);
+  border-color: var(--disabled-border-color);
+}
+.Switch[aria-checked=true][aria-disabled=true] > .SwitchControl,
+.Switch[aria-checked=true][aria-disabled=true] > .SwitchControl::before
+{
+  background-color: var(--checked-disabled-bg-color);
+}
+@media (hover: hover) and (pointer: fine)
+{
+  .Switch,
+  .SwitchLabel
+  {
+    cursor: pointer;
+  }
+  .Switch:hover > .SwitchControl,
+  .Switch:hover > .SwitchControl:before
+  {
+    border-color: var(--accent-color);
+  }
+  .Switch[aria-disabled=true],
+  .Switch[aria-disabled=true] > .SwitchLabel
+  {
+    cursor: var(--disabled-cursor);
+  }
+}

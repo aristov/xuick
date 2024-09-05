@@ -1,0 +1,54 @@
+@import 'icons/css/fontawesome-fonts.css';
+
+.DateTimeRangeBox .Button > .Control
+{
+  min-width: auto;
+}
+.DateTimeRangeBox .Button > .Control::before
+{
+  font-family: 'fontawesome';
+  line-height: 0;
+}
+.DateTimeRangeBox .TimeButton > .Control::before
+{
+  content: '\e81c';
+  opacity: var(--icon-opacity);
+}
+.DateTimeRangeBox .EndButton > .Control::before
+{
+  content: '\f271';
+  opacity: var(--icon-opacity);
+}
+.DateTimeRangeBox .Widget > .Control::after
+{
+  display: none;
+}
+.DateTimeRangeBox .TimeBox .TextBox
+{
+  min-width: auto;
+}
+.DateTimeRangeBox .TimeBox .TextBox > .Control,
+.DateTimeRangeBox .TimeBox:active .TextBox > .Control
+{
+  border: none;
+  box-shadow: none;
+}
+.DateTimeRangeBox > .Control > .Widget
+{
+  min-width: auto;
+}
+.DateTimeRangeBox > .Control > .Span
+{
+  opacity: var(--icon-opacity);
+}
+.DateTimeRangeBox[aria-required=true] > .Control > .ClearButton
+{
+  display: none;
+}
+@media (hover: hover) and (pointer: fine)
+{
+  .DateTimeRangeBox .Button:hover > .Control::before
+  {
+    opacity: var(--icon-hover-opacity);
+  }
+}

@@ -1,0 +1,30 @@
+@import 'icons/css/fontawesome-fonts.css';
+
+.DialogCancelButton
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: var(--icon-opacity);
+  color: rgba(0, 0, 0, .5);
+  font-size: 1.1rem;
+  padding: 5px;
+}
+.DialogCancelButton::before
+{
+  font-family: 'fontawesome';
+  content: '\e800';
+  margin: 0 .2em;
+}
+@media (hover: hover) and (pointer: fine)
+{
+  .DialogCancelButton:hover
+  {
+    opacity: var(--icon-hover-opacity);
+  }
+}
+.DialogCancelButton:active
+{
+  opacity: 1;
+}

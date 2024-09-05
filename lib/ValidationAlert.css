@@ -1,0 +1,27 @@
+.ValidationAlert
+{
+  font-size: 12px;
+  justify-content: flex-start;
+}
+.ValidationAlert > .PopupContent::before
+{
+  content: '';
+  border: 8px solid transparent;
+  border-bottom-color: var(--attention-color);
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  margin: 0 20px -1px;
+  z-index: -1;
+}
+.ValidationAlert > .PopupContent
+{
+  color: #fff;
+  background-color: var(--attention-color);
+  padding: var(--control-padding);
+  display: block;
+}
+.ValidationAlert > .PopupContent::first-letter
+{
+  text-transform: uppercase;
+}

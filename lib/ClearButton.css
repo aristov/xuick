@@ -1,0 +1,33 @@
+@import 'icons/css/fontawesome-fonts.css';
+
+.ClearButton
+{
+  margin: 0;
+  opacity: var(--icon-opacity);
+  padding: var(--control-padding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ClearButton::before
+{
+  font-family: 'fontawesome';
+  content: '\e800';
+  line-height: 1;
+}
+.ClearButton.active,
+.ClearButton[aria-disabled=true]
+{
+  background-color: var(--control-bg-color);
+}
+.ClearButton[aria-disabled=true]
+{
+  opacity: .2;
+}
+@media (hover: hover) and (pointer: fine)
+{
+  .ClearButton:not([aria-disabled=true]):hover
+  {
+    opacity: var(--icon-hover-opacity);
+  }
+}

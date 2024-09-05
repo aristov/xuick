@@ -1,0 +1,15 @@
+.Rating
+{
+  position: relative;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--control-border);
+  border-radius: var(--border-radius);
+  padding: 1em;
+}
+.Rating > .Inner
+{
+  position: absolute;
+}

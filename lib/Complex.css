@@ -1,0 +1,38 @@
+.Complex > .Widget
+{
+  margin: 0 2px 2px 0;
+}
+.Complex > .Control
+{
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  cursor: default;
+}
+.Complex > .Control > .Widget
+{
+  margin: 0;
+  vertical-align: middle;
+}
+.Complex > .Control > .Widget > .Control
+{
+  border: none;
+  border-radius: 0;
+}
+.Complex > .Control > .Widget:focus-visible > .Control
+{
+  color: var(--focus-color);
+}
+.Complex > .Control > .Widget:focus-visible > .Control,
+.Complex > .Control > .Widget:focus-within > .Control,
+.Complex > .Control > .Widget:focus-within.keyboard > .Control
+{
+  box-shadow: none;
+}
+.Complex:focus-within.keyboard > .Control
+{
+  border-color: var(--focus-border-color);
+  box-shadow: var(--focus-box-shadow);
+}

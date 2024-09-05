@@ -1,0 +1,89 @@
+:root
+{
+  --text-color: rgb(0 0 0);
+  --link-color: rgb(0 10 255);
+  --visited-color: var(--link-color);
+  --bg-color: rgb(255 255 255);
+
+  --success-color: rgb(0 176 0);
+
+  --warning-color: rgb(255 202 0);
+
+  --action-color: rgb(215 221 255);
+  --action-text-color: var(--text-color);
+  --action-border-color: var(--action-color);
+  --action-bg-color: var(--action-color);
+  --action-active-bg-color: rgb(215 221 255 / 85%);
+
+  --accent-color: rgb(120 79 205);
+  --accent-text-color: rgb(255 255 255);
+  --accent-border-color: var(--accent-color);
+  --accent-bg-color: var(--accent-color);
+  --accent-active-bg-color: rgb(120 79 205 / 90%);
+
+  --attention-color: rgb(248 0 0);
+  --attention-text-color: rgb(255 255 255);
+  --attention-border-color: var(--attention-color);
+  --attention-bg-color: var(--attention-color);
+  --attention-active-bg-color: rgb(248 0 0 / 90%);
+
+  --dim-color: rgb(186 186 186);
+  --dim-text-color: rgb(255 255 255);
+  --dim-border-color: var(--dim-color);
+  --dim-bg-color: var(--dim-color);
+  --dim-active-bg-color: rgb(186 186 186 / 90%);
+
+  --focus-color: var(--accent-color);
+  --focus-text-color: var(--focus-color);
+  --focus-border-color: var(--focus-color);
+  --focus-box-shadow: none;
+
+  --active-bg-color: rgb(246 246 246);
+
+  --disabled-text-color: rgb(0 0 0 / 10%);
+  --disabled-border-color: transparent;
+  --disabled-bg-color: rgb(238 238 238);
+  --disabled-cursor: default;
+
+  --checked-text-color: rgb(255 255 255);
+  --checked-bg-color: var(--accent-color);
+  --checked-active-bg-color: var(--accent-active-bg-color);
+  --checked-disabled-bg-color: rgb(217 217 217);
+
+  --readonly-opacity: .7;
+
+  --icon-color: rgb(0 0 0 / 50%);
+  --icon-opacity: .3;
+  --icon-hover-opacity: .5;
+
+  --control-bg-color: var(--bg-color);
+  --control-padding-v: 5px;
+  --control-padding-h: var(--gap);
+  --control-padding: var(--control-padding-v) var(--control-padding-h);
+  --control-border-radius: 5px;
+  --control-border-color: var(--action-color);
+  --control-border-width: 1px;
+  --control-border: var(--control-border-width) solid var(--control-border-color);
+
+  --gap: 8px;
+
+  --checkbox-label-margin: 0 0 0 var(--gap);
+  --checkbox-control-border: 2px solid var(--control-border-color);
+
+  --widget-font-size: 14px;
+  --widget-margin: 0;
+
+  --popup-bg-color: var(--bg-color);
+  --popup-box-shadow: 0 8px 16px -4px rgb(0 0 0 / 50%);
+
+  --border-radius: 5px;
+  --button-width: 100px;
+  --textbox-width: 220px;
+  --block-padding: 14px;
+  --doc-padding: 10px;
+}
+:root
+{
+  --popup-z-index: 10;
+  --popup-modal-z-index: 100;
+}

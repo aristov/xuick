@@ -1,0 +1,9 @@
+.MonthYearBox .MonthBox,
+.MonthYearBox .YearBox
+{
+  min-width: auto;
+}
+.MonthYearBox .SelectBoxControl::after
+{
+  display: none;
+}
